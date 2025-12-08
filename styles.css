@@ -1,0 +1,232 @@
+/* ================================================
+   HOMESecure RESTORED THEME + BADGE SYSTEM
+   ================================================ */
+
+/* GLOBAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background: #004053; /* Navy */
+    padding: 22px 0;
+    color: white;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+/* ================================================
+   KPI BAR (RESTORED ORIGINAL THEME)
+   ================================================ */
+
+.kpi-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.kpi-card {
+    flex: 1;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* KPI tile colours — EXACT ORIGINAL THEME */
+.kpi-card:nth-child(1) { background: #004053; } /* Monthly — Navy */
+.kpi-card:nth-child(2) { background: #F36E21; } /* Upfront — Orange */
+.kpi-card:nth-child(3) { background: #FDB71A; color: black; } /* Monitoring — Yellow */
+.kpi-card:nth-child(4) { background: rgba(0,0,0,0.10); color: black; } /* Yearly — Black 10% */
+
+.kpi-card .value {
+    font-size: 32px;
+    margin-top: 8px;
+}
+
+/* ================================================
+   TABLES (RESTORED HOMESECURE STYLE)
+   ================================================ */
+
+.team-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 25px 0 10px;
+    color: #004053;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+th {
+    background: #004053; /* Navy */
+    color: white;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    padding: 14px;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+tr:hover {
+    background: #ececec;
+}
+
+/* ================================================
+   BADGE SYSTEM — CENTERED (SIZE 22px)
+   ================================================ */
+
+.badge-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 22px;
+    padding: 6px 0;
+}
+
+.badge-cell span {
+    display: inline-block;
+    transform: translateY(1px);
+}
+
+/* ================================================
+   CELEBRATION BANNER
+   ================================================ */
+
+.celebration-banner {
+    position: fixed;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #F36E21, #004053); /* Orange → Navy */
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 9999;
+    animation: slideDown 0.6s ease-out forwards;
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+    from { top: -120px; }
+    to { top: 0; }
+}
+
+/* Fade-out animation */
+.fade-out {
+    animation: fadeOut 0.8s ease-in forwards !important;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* ======================================================
+   ADD SALE BUTTON (HEADER BUTTON – A1 = Position 1)
+   ====================================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 30px;
+}
+
+header .title {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.add-sale-btn {
+    background: #F36E21; /* Orange */
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.add-sale-btn:hover {
+    background: #FDB71A; /* Yellow */
+    color: black;
+}
+
+/* ======================================================
+   TV MODE LAYOUT (applies only inside tv.html)
+   ====================================================== */
+
+body.tv-mode {
+    overflow: hidden;        /* No scrollbars */
+    background: #f2f2f2;
+}
+
+.tv-container {
+    width: 98%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.tv-title {
+    font-size: 42px;
+    text-align: center;
+    font-weight: bold;
+    color: #004053;
+    margin-bottom: 20px;
+}
+
+.auto-refresh-note {
+    text-align: center;
+    font-size: 16px;
+    color: #004053;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+.table-wrapper {
+    max-height: none !important;  /* Ensure full table visibility */
+}

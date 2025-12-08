@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeSecure TV Mode</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Extra TV-specific styling */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body class="tv-mode">
+
+    <div class="tv-container">
+
+        <div class="tv-title">HomeSecure – Live Sales Board</div>
+
+        <div class="auto-refresh-note">
+            This screen updates automatically every 60 seconds.
+        </div>
+
+        <!-- KPI BAR -->
+        <div class="kpi-container">
+            <div class="kpi-card">
+                <div>Total Sales (Monthly)</div>
+                <div class="value" id="kpi-monthly-value">0</div>
+            </div>
+
+            <div class="kpi-card">
+                <div>Avg Upfront</div>
+                <div class="value" id="kpi-upfront-value">€0.00</div>
+            </div>
+
+            <div class="kpi-card">
+                <div>Avg Monitoring</div>
+                <div class="value" id="kpi-monitoring-value">€0.00</div>
+            </div>
+
+            <div class="kpi-card">
+                <div>Total Sales (Yearly)</div>
+                <div class="value" id="kpi-yearly-value">0</div>
+            </div>
+        </div>
+
+        <h2 class="team-title">CORE Team</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Agent</th>
+                        <th>Badges</th>
+                        <th>Daily</th>
+                        <th>Weekly</th>
+                        <th>Monthly</th>
+                        <th>Avg Upfront €</th>
+                        <th>Avg Monitoring €</th>
+                        <th>Yearly</th>
+                        <th>Rank</th>
+                    </tr>
+                </thead>
+                <tbody id="core-team-body"></tbody>
+            </table>
+        </div>
+
+        <h2 class="team-title">SWEEP Team</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Agent</th>
+                        <th>Badges</th>
+                        <th>Daily</th>
+                        <th>Weekly</th>
+                        <th>Monthly</th>
+                        <th>Avg Upfront €</th>
+                        <th>Avg Monitoring €</th>
+                        <th>Yearly</th>
+                        <th>Rank</th>
+                    </tr>
+                </thead>
+                <tbody id="sweep-team-body"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Celebration Banner (still functional) -->
+    <div id="celebration-root"></div>
+
+    <!-- Shared Dashboard Engine -->
+    <script type="module" src="js/dashboard.js"></script>
+
+    <!-- Auto-Refresh Script -->
+    <script type="module" src="js/tv.js"></script>
+
+</body>
+</html>
